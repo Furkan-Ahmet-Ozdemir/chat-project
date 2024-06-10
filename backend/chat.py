@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-genai.configure(api_key='AIzaSyDPvU7wCXOXkNXKAaKnJpgmohdcEDFjFdA')
+genai.configure(api_key='API_KEY')
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 @app.route('/get_recommendation', methods=['POST'])
