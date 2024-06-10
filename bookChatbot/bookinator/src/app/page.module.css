@@ -1,0 +1,206 @@
+/* Main Page */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url(../../public/images/1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.mainContainer {
+  display: flex;
+  flex: 1 1;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.imageContainer {
+  flex: 1 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logo {
+  border-radius: 4em;
+  margin-top: 30px;
+  box-shadow: 5px 5px black;
+  border: 0.1em solid black;
+}
+
+.helloRegion {
+  background: #c1e6f9;
+  border: 0.1em solid black;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px black;
+  border-bottom-left-radius: 0em !important;
+}
+
+.helloTitle {
+  background: white;
+  margin: 8px;
+  border: 0.05em solid black;
+  border-radius: 0.1em;
+  font-weight: 300;
+  font-size: xxx-large;
+  border-bottom-left-radius: 0em !important;
+}
+.helpTextRegion {
+  background: #fef1ca;
+  border: 0.1em solid black;
+  border-radius: 0.3em;
+  padding: 10px;
+  font-size: larger;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-bottom-left-radius: 0em !important;
+}
+
+.infoRegion {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.titleRegion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  flex: 1 1;
+  margin: 5% 10% 5% 10%;
+  gap: 30px;
+}
+
+/*Chat Component*/
+.questionRegion {
+  flex: 3;
+  position: relative;
+  margin: 5% 10%;
+  border-radius: 0.3em;
+  border: 0.1em solid black;
+  overflow-y: auto;
+  background-color: rgb(213, 241, 214, 0.9);
+  justify-content: center;
+  display: flex;
+  box-shadow: 5px 5px black;
+}
+.chatRegion {
+  height: 80%;
+  width: 95%;
+  background: white;
+  top: 3%;
+  position: absolute;
+  overflow-y: auto;
+  border: 0.1em solid black;
+  border-radius: 0.3em;
+}
+.chatRegion ul {
+  padding-block: 2%;
+  list-style: none;
+}
+.ai {
+  border-bottom-left-radius: 0em !important;
+  background: #efe3ff;
+  max-width: 70%;
+  border-radius: 1em;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: black;
+  font-weight: 200;
+  border: 1px solid #d9bfff;
+  box-shadow: 2px 2px #d9bfff;
+  padding: 10px;
+}
+.human {
+  border-bottom-right-radius: 0em !important;
+  background: #fef1ca;
+  max-width: 70%;
+  border-radius: 1em;
+  margin-top: 2%;
+  margin-left: 28%;
+  color: black;
+  font-weight: 200;
+  border: 1px solid #f9e3a4;
+  box-shadow: 2px 2px #f9e3a4;
+  padding: 10px;
+}
+.recommendationContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.recommendations {
+  display: flex;
+  align-items: center;
+}
+.inputRegion {
+  position: absolute;
+  bottom: 2%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.input {
+  width: 90%;
+  height: 50px;
+  border-radius: 2em;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 10px;
+}
+.enterButtonActive {
+  border-radius: 2em;
+  height: 40px;
+  width: 43px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background: #c6aefc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px black;
+}
+.enterButtonDisabled {
+  border-radius: 2em;
+  height: 40px;
+  width: 43px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background: #c6aefc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: auto;
+  box-shadow: 3px 3px black;
+}
+.newChatButton {
+  border-radius: 2em;
+  height: 40px;
+  width: 150px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background: #c6aefc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  box-shadow: 3px 3px black;
+}
