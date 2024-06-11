@@ -6,17 +6,14 @@ app = Flask(__name__)
 CORS(app)
 
 
-genai.configure(api_key='API_KEY')
+genai.configure(api_key='AIzaSyDPvU7wCXOXkNXKAaKnJpgmohdcEDFjFdA')
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 @app.route('/get_recommendation', methods=['POST'])
 def recommend_books():
     data = request.get_json()
-    
-    print(data)
-    prompt = data.get('user_input')
 
-    print(prompt)
+    prompt = data.get('user_input')
 
     try:
         response = model.generate_content(prompt)

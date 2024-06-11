@@ -2,28 +2,20 @@ import axios from "axios";
 
 export const getRecommendations = async (answers) => {
     try {
-          const books = [
-            { title: "To Kill a Mockingbird", author: "Harper Lee" },
-            { title: "1984", author: "George Orwell" },
-            { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
-            { title: "The Catcher in the Rye", author: "J.D. Salinger" },
-            { title: "Moby-Dick", author: "Herman Melville" },
-            { title: "Pride and Prejudice", author: "Jane Austen" },
-            { title: "The Hobbit", author: "J.R.R. Tolkien" },
-            { title: "War and Peace", author: "Leo Tolstoy" },
-            { title: "The Odyssey", author: "Homer" },
-            { title: "Ulysses", author: "James Joyce" },
-          ];
-          return books;
-      /*     const url = "https://api.example.com/postData";
+          
+      const url = "http://localhost:5000/get_recommendation";
 
       const headers = {
-        "Content-Type": "application/json"
-      }; */
+        "Content-Type": "application/json",
+      };
 
-      const data = `${answers[0].text} romanları okumayı severim. ${answers[1].text} dilinde kitaplar okumayı severim. Bana 3 tane kitap öner. Sadece kitap isimleri ve yazar isimlerini ver.`;
-      //  const response = await axios.post(url, data, headers);
-      //  const books = response.data;
+      const prompt = `I enjoy reading books in the ${answers[0].text} genre. I like reading in ${answers[1].text} and the books of ${answers[2].text}. Recommend me just 3 books and Just provide the book titles and author names. Dont answer with descriptions or another else.`;
+
+      const response = await axios.post(url, { user_input: prompt }, { headers });
+      const books = response.data.recommendations;
+
+      return books.split('\n').map((book) => ({ title: book.trim() }));
+    
     } catch (error) {
       console.error("Failed to save answers:", error);
     } 
